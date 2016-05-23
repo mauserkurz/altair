@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Altair</title>
-	<base href="http://mauserkurz.github.io/altair/">
+	<base href="http://altair.loc">
 	<link rel="stylesheet" type="text/css" href="style/normalize.css">
 	<link rel="stylesheet" type="text/css" href="style/style.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -180,8 +180,8 @@
 		<script type="text/javascript">
 			var slide1 = document.getElementById("slider");
 			var toggle = document.getElementById("range");
-			var ie = window.navigator.userAgent.indexOf("MSIE");
-			if (ie > 0) {
+			var ie = window.navigator.userAgent;
+			if (ie.indexOf('MSIE 10.0') !== -1 || ie.indexOf('Trident/7.0') !== -1) {
 				toggle.addEventListener("change", function(event) {
 					event.preventDefault();
 					slide1.style.marginLeft = "-" + toggle.value + "px";
